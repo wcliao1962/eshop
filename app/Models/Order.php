@@ -9,7 +9,7 @@ class Order extends Model
 {
     use HasFactory;
 
-    public function order_items()
+    public function orderItems()    // 關係函數應使用小駝峰的命名方式，非蛇底方式
     {
         return $this->hasMany(OrderItem::class);
     }

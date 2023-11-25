@@ -17,12 +17,12 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function cart_items()
+    public function cartItems()   // 關係函數應使用小駝峰的命名方式，非蛇底方式
     {
         return $this->hasMany(CartItem::class);
     }
 
-    public function order_items()
+    public function orderItems()  // 關係函數應使用小駝峰的命名方式，非蛇底方式
     {
         return $this->hasMany(OrderItem::class);
     }

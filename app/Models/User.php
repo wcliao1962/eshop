@@ -43,7 +43,7 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function cart_items()
+    public function cartItems()   // 關係函數應使用小駝峰的命名方式，非蛇底方式
     {
         return $this->hasMany(CartItem::class);
     }
