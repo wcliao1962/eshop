@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CartItemController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +37,7 @@ products.update:    PUT|PATCH   products/{product}      ProductController@update
 products.destroy:   DELETE      products/{product}      ProductController@destroy
                     刪除某一產品
 */
+Route::resource('cart_items', CartItemController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
