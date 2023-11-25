@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
             CartItem::factory(3)->for($user)->create();
         }
 
-        Staff::factory(5);
+        Staff::factory(5)->create();
 
     }
 }

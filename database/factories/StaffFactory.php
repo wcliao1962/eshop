@@ -3,12 +3,16 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Staff>
  */
 class StaffFactory extends Factory
 {
+    private static string $password;
+
     /**
      * Define the model's default state.
      *
