@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartItemController;
+use App\Http\Controllers\CategoryProductController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -37,8 +38,13 @@ products.update:    PUT|PATCH   products/{product}      ProductController@update
 products.destroy:   DELETE      products/{product}      ProductController@destroy
                     刪除某一產品
 */
+
+Route::resource('categories.products', CategoryProductController::class)->only([
+    'index',
+]);
 Route::resource('cart_items', CartItemController::class);
 Route::resource('orders', OrderController::class);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
