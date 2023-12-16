@@ -28,8 +28,9 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">All Products</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        @foreach($categories as $category)
+                            <li><a class="dropdown-item" href="{{route('categories.products.index', $category->id)}}">{{$category->name}}</a></li>
+                        @endforeach
                     </ul>
                 </li>
             </ul>
